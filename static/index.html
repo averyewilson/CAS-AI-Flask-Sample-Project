@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Grilled Cheese Recipes</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<ul class="nav nav-tabs">
+  <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
+  <li><a data-toggle="tab" href="#about">About</a></li>
+  <li><a data-toggle="tab" href="#recipes">Recipes</a></li>
+  <li><a data-toggle="tab" href="#contact">Contact</a></li>
+</ul>
+
+<div id="home" class="tab-pane fade in active">
+  <div class="jumbotron text-center">
+    <h1>Welcome to the Grilled Cheese Recipe Website</h1>
+    <p>Explore the world of delicious grilled cheese!</p>
+  </div>
+
+  <div class="container text-center">
+    <img src="grilledcheese1.jpg" alt="Grilled Cheese" class="img-responsive">
+  </div>
+</div>
+
+<div class="tab-content">
+  <!-- ... (existing code) ... -->
+
+  <div id="recipes" class="tab-pane fade">
+    <div class="container">
+      <h2>Recipes</h2>
+      <!-- Add your recipe content here -->
+      <!-- Pesto and Sun-Dried Tomato Grilled Cheese -->
+      <div class="row">
+        <div class="col-sm-4">
+          <h3>Pesto and Sun-Dried Tomato Grilled Cheese</h3>
+          <img src="pestogrilledcheese.jpg" alt="Pesto Grilled Cheese" class="img-responsive">
+          <p>Ingredients: <br> ... (paste the recipe details)</p>
+        </div>
+        <!-- ... Repeat the structure for other recipes ... -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ... (existing code) ... -->
+
+</div>
+
+<script>
+  $(document).ready(function(){
+    $(".nav-tabs li:first-child a").click();
+
+    $(".nav-tabs a").click(function(){
+      $(".tab-pane").removeClass("in active");
+      var tabId = $(this).attr("href");
+      $(tabId).addClass("in active");
+    });
+  });
+</script>
+
+</body>
+</html>
